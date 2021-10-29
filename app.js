@@ -13,7 +13,7 @@ client.on('ready', () => {
 
 client.on('messageCreate', async (msg) => {
   if (msg.author.bot) return;
-  if (!msg.content.includes(prefix)) return; // do nothing if prefix isn't used
+  if (!msg.content.startsWith(prefix)) return; // do nothing if prefix isn't used
 
   const userCmd = msg.content.slice(prefix.length);
 
