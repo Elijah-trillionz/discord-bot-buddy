@@ -17,8 +17,6 @@ client.on('messageCreate', async (msg) => {
 
   const userCmd = msg.content.slice(prefix.length);
 
-  const res = await msg.channel.messages.fetch({ limit: 10 });
-
   if (userCmd === commands.getName) {
     msg.reply(msg.author.username);
   } else if (userCmd === commands.tellJoke) {
